@@ -5,10 +5,11 @@ const peopleInsideBuilding = d.querySelector(".shadows");
 const corpses = d.querySelector(".corpseArea")
 const areaRule = d.querySelector(".lordArea")
 const doorState = d.querySelector(".door_state")
-
+const conflictDetail = d.querySelector(".mainDescArea")
+//.lastChild
 //Selecting the point on the page to attach the additional visualisations
 const main = document.querySelector("#main-right")
-
+console.log(conflictDetail)
 //Attaching div the  will be appended to
 const e = document.createElement("div")
   e.className= "frame"
@@ -34,10 +35,10 @@ const alignmentImage = () => {
 
   if(areaRule) {
     const text = areaRule.innerText
-    if(text.includes("good")){
-      img.src = getImgSrc("good.svg")
+    if(text.includes("Good")){
+     img.src = getImgSrc("good.svg")
     } else {
-      text.includes("evil") ? img.src = getImgSrc("evil.svg") :
+      text.includes("Evil") ? img.src = getImgSrc("evil.svg") :
       img.src = getImgSrc("neutral.svg")
     }
     return img
